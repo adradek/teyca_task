@@ -1,0 +1,35 @@
+
+inherit_mode:
+  # Exclude instructions are merged, not overwritten
+  merge:
+    - Exclude
+
+require:
+  - standard
+  - standard-custom
+  - standard-performance
+  - rubocop-performance
+  - rubocop-rspec
+
+inherit_gem:
+  standard: config/base.yml # might be: config/ruby-3.0.yml
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+
+inherit_from:
+  - .rubocop_todo.yml
+  - .rubocop_strict.yml
+
+# Sometimes we enable metrics cops
+# (which are disabled in Standard by default)
+#
+# Metrics:
+#   Enabled: true
+
+# Global options, like Ruby version
+# AllCops:
+#   SuggestExtensions: false
+#   TargetRubyVersion: 3.2
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 8

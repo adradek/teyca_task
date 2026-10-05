@@ -14,6 +14,14 @@ gem "sqlite3", "~> 2.9"
 
 gem "rake", "~> 13.4"
 
+group :development do
+  gem "rubocop"
+  gem "rubocop-performance"
+  gem "rubocop-rspec"
+  gem "standard", "~> 1.33"
+  gem "standard-performance"
+end
+
 group :test do
   gem "rspec", "~> 3.13"
   gem "rack-test", "~> 2.2"
