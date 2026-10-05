@@ -20,6 +20,7 @@ group :development do
   gem "rubocop-rspec"
   gem "standard", "~> 1.33"
   gem "standard-performance"
+  gem "lefthook"
 end
 
 group :test do

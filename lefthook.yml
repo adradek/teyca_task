@@ -1,0 +1,4 @@
+pre-commit:
+  jobs:
+    - name: lint backend
+      run: bundle exec rubocop --force-exclusion -- {all_files}
