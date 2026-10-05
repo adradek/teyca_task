@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - "4567:4567"
+    environment:
+      RACK_ENV: development
+      DATABASE_URL: sqlite://db/development.sqlite3
+    volumes:
+      - .:/usr/src/app
+      - gems:/usr/local/bundle
+    stdin_open: true
+    tty: true
+
+volumes:
+  gems:
