@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 RUN useradd -ms /bin/bash alexey
 USER alexey
 
-COPY Gemfile Gemfile.lock ./
+COPY --chown=alexey:alexey Gemfile Gemfile.lock ./
 RUN bundle install
 
 COPY --chown=alexey:alexey . .
